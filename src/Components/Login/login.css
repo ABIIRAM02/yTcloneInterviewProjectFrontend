@@ -7,23 +7,28 @@
 }
 .main
 {
-    height: 80vh;
+    height: 90vh;
     width: 30vw;
     border: 2px solid white;
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 20px;
-    padding: 20px 0;
+    /* padding: 20px 0; */
     border-radius: 10px;
     overflow: hidden;
 }
-.main>h2
+.main>div>h2
 {
+    font-size: 38px;
+}
+.main>h2{
+    margin: 1rem;
     font-size: 38px;
 }
 .form
 {
+    flex: 2;
     width: 85%;
     display: flex;
     flex-direction: column;
@@ -59,12 +64,12 @@
 .user
 {
     display: flex;
+    flex: 1;
     justify-content: center;
     align-items: center;
     gap: 10px;
     background-color: maroon;
-    padding: 50px;
-    border-radius: 50% 50% 0 0 ;
+    border-radius: 100% 100% 0 0 ;
 }
 .user>p
 {
@@ -74,4 +79,10 @@
 .link
 {
     background: maroon;
+}
+.form>p
+{
+    color: maroon;
+    font-size: 15px;
+    margin-right: auto;
 }

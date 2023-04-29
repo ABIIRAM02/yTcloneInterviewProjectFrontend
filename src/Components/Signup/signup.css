@@ -1,3 +1,13 @@
+.main>div
+{
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 0;
+    /* border: 2px solid white; */
+}
 .signup-form
 {
     width: 85%;
@@ -5,11 +15,14 @@
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    margin: 1rem auto;
+    margin: auto;
+    /* padding:  20px; */
     /* border: 2px solid white; */
+
 }
 .signup-form>input
 {
+    height: fit-content;
     border: none;
     outline: none;
     width: 100%;
@@ -23,11 +36,23 @@
     color: whitesmoke;
 }
 
-.signup-form>input:nth-child(5)
+.signup-form>input:last-child
 {
     margin: 1rem 0;
     border: 2px solid white;
     border-radius: 8px;
     cursor: pointer;
     background: none;
+}
+.signup-form>.inputERR
+{
+    box-shadow: 0 0 10px 2px maroon;
+    /* border:2px solid whitesmoke */
+}
+.signup-form>p
+{
+    color:whitesmoke ;
+    font-size: 15px;
+    /* font-weight: bold; */
+    margin-right: auto;
 }

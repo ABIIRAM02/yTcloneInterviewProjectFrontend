@@ -24,11 +24,13 @@ const Login = () => {
             switch(response.data.message)
             {
                 case "Login Successfull" : return dispatch({type:"user_data" , payload : response.data.userData }) , alert("login successfull") , navigate('/home') , console.log(response.data.userData);
-                case "Incorrect password" : return alert("incorrect password")
+                case "Incorrect password" : return setErrMsg(true)
                 default : return alert("seems like you haven't signed before") 
             }
         })
     }
+
+    let [errMsg , setErrMsg] = useState(false)
 
     return ( 
         <section className='login' >
@@ -36,7 +38,8 @@ const Login = () => {
                 <h2>Login</h2>
                 <form onSubmit={handleLogin} className='form' >
                     <input onChange={(e)=>{setEmail(e.target.value)}} type="email" placeholder='email' required />
-                    <input onChange={(e)=>{setPassword(e.target.value)}} type="password" placeholder='password' required />
+                    <input onChange={(e)=>{setPassword(e.target.value) ; setErrMsg(false) }} type="password" placeholder='password' required />
+                    {errMsg && <p>incorrect password</p> }
                     <input type="submit" />
                 </form>
                 <div className='user' >

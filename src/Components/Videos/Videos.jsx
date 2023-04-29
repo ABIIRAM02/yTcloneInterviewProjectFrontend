@@ -41,7 +41,7 @@ const Videos = () => {
 
     return ( 
         <section className="video" >
-        { 
+        { data &&
             data.map((data)=>
             {
                 if(data.type == "video")

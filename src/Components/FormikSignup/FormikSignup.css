@@ -1,0 +1,42 @@
+.FormikSignup
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.FormikSignup-form
+{
+    border: 2px solid white;
+    width: 40%;
+    height: 80%;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.FormikSignup-form>input , .FormikSignup-form>button
+{
+    border: none;
+    background: none;
+    outline: none;
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid royalblue;
+    border-radius: 8px;
+}
+.FormikSignup-form>button
+{
+    margin: 5rem auto;
+    width: 70%;
+    cursor: pointer;
+}
+.FormikSignup-form>.FormikSignup-inputERR
+{
+    border:2px solid darkred
+}
+.FormikSignup-form>.errMessage
+{
+    color: darkred;
+}
